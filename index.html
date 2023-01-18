@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página -->
+    <title>Simulador de Gorjeta</title>
+
+    <!-- Icone da página -->
+    <link rel="icon" href="./imagens/favicon-32x32.png">
+
+    <!-- Link da folha de estilo -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Link da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+        
+
+    <!-- Link logo do linkedin-->
+    <script src="https://kit.fontawesome.com/0bf4242701.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <h4 class="titulo">SPLI<br>TTER</h4>
+
+
+    <div class="conteudo-principal">
+        <div class="form-principal">
+            <form action="" method="post" name="formulario" id="formulario">
+                
+                <label for="inserir">Bill</label><br>
+                <input type="number" class="inserir" id="bill" name="bill" placeholder="0"> <br><br>
+    
+    
+                <label for="select" id="select">Select Tip %</label><br>
+                <div class="buttons">
+                    <input type="button" value="5%" class="porcent" name="cincporcent" id="5" onclick="nomeb(this.name)">
+                    <input type="button" value="10%" class="porcent" name="dezporcent" id="10" onclick="nomeb(this.name)">
+                    <input type="button" value="15%" class="porcent" name="quinporcent" id="15" onclick="nomeb(this.name)">
+                    <input type="button" value="25%" class="porcent" name="vintporcent" id="25" onclick="nomeb(this.name)">
+                    <input type="button" value="50%" class="porcent" name="cinquporcent" id="50" onfocus="nomeb(this.name)">
+                    <input type="number" class="porcent" id="custom" placeholder="Custom" name="custom" onblur="nomeb(this.name)"><br>
+                </div>
+                
+    
+                <label for="inserir">Number of  People</label>
+                <span id="error"></span><br>
+                
+                <input type="number" class="inserir" id="person" onblur="medperson()" placeholder="0">
+            </form>
+        </div>
+        
+        <div class="resultado">
+            <form action="" method="post" name="result" id="result">
+
+                <div class="text-result">
+                    <div class="text"> 
+                        <label for="inputresult" class="text-principal">Tip Amount</label>
+                        <label for="inputresult" class="text-second">/person</label>
+                    </div>
+                   
+                    <span class="inputresult" name="inputgorjeta" id="inputgorjeta"> $0.00</span>
+                </div>
+                
+
+                <div class="text-total">
+                    <div class="text">
+                        <label for="inputresult" class="text-principal">Total</label>
+                        <label for="inputresult" class="text-second">/person</label>
+                    </div>
+                    <span class="inputresult" name="inputtotal" id="inputtotal" >$0.00</span>
+                    
+                </div>
+                
+                <input type="reset" value="RESET" id="reset" onclick="resetar()">
+            </form>
+        </div>
+
+    </div>
+    <div class="creditos">
+        Challege by <a href="https://www.frontendmentor.io/home" class="link">Frontend Mentor</a> || Codado por <a href="https://www.linkedin.com/in/luan-matheus-ferreira-costa-903022214/" class="link">Luan Matheus <i class="fa-brands fa-linkedin link"></i></a>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
